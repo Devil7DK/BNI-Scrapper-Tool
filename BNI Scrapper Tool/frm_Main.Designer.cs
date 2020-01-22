@@ -161,6 +161,7 @@
             // 
             this.prog_Search.Location = new System.Drawing.Point(76, 83);
             this.prog_Search.Name = "prog_Search";
+            this.prog_Search.ShowProgressInTaskBar = true;
             this.prog_Search.Size = new System.Drawing.Size(111, 10);
             this.prog_Search.TabIndex = 8;
             // 
