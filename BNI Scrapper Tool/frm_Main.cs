@@ -192,9 +192,9 @@ namespace Devil7.Automation.BNI.Scrapper
         {
             lbl_Search_Count.Text = string.Format("{0} of {1}", currentSearch, totalSearch);
             if (totalSearch != 0 && currentSearch <= totalSearch)
-                prog_Search.EditValue = ((currentSearch / totalSearch) * 100);
+                prog_Search.Position = ((currentSearch / totalSearch) * 100);
             else
-                prog_Search.EditValue = 0;
+                prog_Search.Position = 0;
         }
         #endregion
 
@@ -343,7 +343,7 @@ namespace Devil7.Automation.BNI.Scrapper
                     lbl_User_Count.Text = string.Format("{0} of {1}", i + 1, exportDatas.Count);
                     lbl_User_Name.Text = exportData.ID.ToString();
 
-                    prog_UserQuery.EditValue = (((i + 1) / exportDatas.Count) * 100);
+                    prog_UserQuery.Position = (((i + 1) / exportDatas.Count) * 100);
 
                     API.GetDetailedInfo(exportData, lastCookie, userAgent);
 
