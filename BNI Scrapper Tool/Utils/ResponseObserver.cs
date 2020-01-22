@@ -48,7 +48,7 @@ namespace  Devil7.Automation.BNI.Scrapper.Utils
             {
                 StreamListenerTee oStream = sender as StreamListenerTee;
                 byte[] aData = oStream.GetCapturedData();
-                string sData = Encoding.ASCII.GetString(aData);
+                string sData = Encoding.UTF8.GetString(aData);
 
                 if (url.Contains(Utils.Constants.SEARCH_RESPONSE_ENDPOINT))
                 {
